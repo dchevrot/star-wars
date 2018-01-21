@@ -3,17 +3,17 @@ package fr.lipn.starwars.chapterone.model;
 public class BattleField {
 
 	private static final int GAME_LOOP_CYCLE_MS = 25;
+	private static final SpaceShipFactory spaceShipFactory = new SpaceShipFactory();
 
 	private final SpaceShip[] spaceShips = createSpaceShips();
-	private final SpaceShip player = new Fighter("X-WING", Faction.REBEL, new Position(0,0));
-
-
+	private final SpaceShip player = spaceShipFactory.createXWing(new Position(0,0));
+	
 	private static SpaceShip[] createSpaceShips() {
 		return new SpaceShip[] {
-				new Bomber("Y-WING", Faction.REBEL, new Position(1,1)),
-				new Fighter("X-WING", Faction.REBEL, new Position(2,2)),
-				new Bomber("TIE BOMBER", Faction.EMPIRE, new Position(3,3)),
-				new Fighter("BORVO", Faction.HUTT, new Position(4,4))
+				spaceShipFactory.createYWing(new Position(1,1)),
+				spaceShipFactory.createXWing(new Position(2,2)),
+				spaceShipFactory.createTIEBomber(new Position(3,3)),
+				spaceShipFactory.createBorvo(new Position(4,4))
 		};
 	}
 

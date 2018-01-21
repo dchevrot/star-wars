@@ -6,6 +6,13 @@ package fr.lipn.starwars.chapterone.model;
 public interface SpaceShip extends HasFaction {
 	
 	/**
+	 * Gets the current position of the spaceship
+	 *
+	 * @return the position
+	 */
+	Position getPosition();
+	
+	/**
 	 * Move the spaceship from its initial position to a new one
 	 *
 	 * @return the new position
