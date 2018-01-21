@@ -5,22 +5,24 @@ package fr.lipn.starwars.chapterone.model;
  */
 public class Bomber extends AbstractSpaceShip {
 
-	/**
-	 * Instantiates a new bomber.
-	 *
-	 * @param name the name
-	 * @param faction the faction
-	 */
-	public Bomber(String name, Faction faction) {
-		super(name, faction);
+	public Bomber(String name, Faction faction, Position position) {
+		super(name, faction, position);
 	}
 
-	/* (non-Javadoc)
-	 * @see fr.lipn.starwars.chapterone.model.AbstractSpaceShip#toString()
-	 */
+	@Override
+	public Position move() {
+		Position initialPos = getPosition();
+		Position newPos = new Position(initialPos.getX(), initialPos.getY() + 1);
+		setPosition(newPos);
+		return newPos;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + " Hey I am a Bomber.";
 	}
+
+
+
 
 }

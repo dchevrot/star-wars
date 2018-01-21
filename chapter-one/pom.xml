@@ -13,7 +13,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
-    	<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<slick2d.version>1.0.2</slick2d.version>
 	</properties>
 
 	<dependencies>
@@ -22,7 +23,18 @@
 		<dependency>
 			<groupId>org.slick2d</groupId>
 			<artifactId>slick2d-core</artifactId>
-			<version>1.0.2</version>
+			<version>${slick2d.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.lwjgl.lwjgl</groupId>
+					<artifactId>lwjgl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.lwjgl.lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -31,4 +43,28 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.googlecode.mavennatives</groupId>
+				<artifactId>maven-nativedependencies-plugin</artifactId>
+				<version>0.0.7</version>
+				<executions>
+					<execution>
+						<id>unpacknatives</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>natives</directory>
+			</resource>
+		</resources>
+	</build>
 </project>

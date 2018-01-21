@@ -4,11 +4,13 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 	
 	private final String name;
 	private final Faction faction;
+	private Position position;
 	private Pilot pilot;
 	
-	public AbstractSpaceShip(String name, Faction faction) {
+	public AbstractSpaceShip(String name, Faction faction, Position position) {
 		this.name = name;
 		this.faction = faction;
+		this.position = position;
 	}
 	
 	@Override
@@ -24,6 +26,14 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 			throw new IllegalStateException("I have already a pilot");
 		}
 	}
+	
+	public Position getPosition() {
+		return position;
+	}
+	
+	protected void setPosition(Position newPos) {
+		this.position = newPos;
+	}
 
 	@Override
 	public void exit() {
@@ -32,6 +42,6 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 	
 	@Override
 	public String toString() {
-		return "I am " + name + ". I belong to " + faction.getName() + " faction. " + (pilot != null? pilot.toString() : "No pilot.");
+		return "I am " + name + ". I belong to " + faction.getName() + " faction. " + (pilot != null? pilot.toString() : "No pilot. " + position);
 	}
 }
