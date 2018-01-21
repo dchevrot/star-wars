@@ -5,6 +5,12 @@ package fr.lipn.starwars.chapterone.model;
  */
 public interface SpaceShip extends HasFaction {
 	
+	/**
+	 * Move the spaceship from its initial position to a new one
+	 *
+	 * @return the new position
+	 */
+	Position move();	
 
 	/**
 	 * Allow a pilot to enter the spaceship.
