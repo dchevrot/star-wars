@@ -12,6 +12,11 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 	}
 	
 	@Override
+	public Faction getFaction() {
+		return faction;
+	}
+	
+	@Override
 	public void enter(Pilot p) {
 		if(pilot == null) {
 			this.pilot = p;

@@ -3,7 +3,7 @@ package fr.lipn.starwars.chapterone.model;
 /**
  * The Class Pilot. I am the proud fighter of freedom or not...
  */
-public class Pilot {
+public class Pilot implements HasFaction {
 	
 	/** The name. */
 	private final String name;
@@ -39,6 +39,7 @@ public class Pilot {
 	 *
 	 * @return the faction
 	 */
+	@Override
 	public Faction getFaction() {
 		return faction;
 	}

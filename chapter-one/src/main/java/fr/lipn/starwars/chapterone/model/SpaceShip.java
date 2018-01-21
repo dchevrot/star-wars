@@ -3,7 +3,7 @@ package fr.lipn.starwars.chapterone.model;
 /**
  * The Interface SpaceShip.
  */
-public interface SpaceShip {
+public interface SpaceShip extends HasFaction {
 	
 
 	/**
