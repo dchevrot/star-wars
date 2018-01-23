@@ -4,10 +4,11 @@ import fr.lipn.starwars.chapterone.model.Position;
 import fr.lipn.starwars.chapterone.model.SpaceShip;
 
 public class DefaultFighterMotion extends AbstractMotion {
-	
-	private static final int X_DEVIATION = 2;
+
+	private static final int X_DEVIATION = 20;
 	private final Position initialPosition;
-	
+	private boolean goRight = true;
+
 	public DefaultFighterMotion(Position initialPosition) {
 		super(initialPosition);
 		this.initialPosition = initialPosition;
@@ -22,14 +23,24 @@ public class DefaultFighterMotion extends AbstractMotion {
 	@Override
 	public Position innerMove(SpaceShip s) {
 		Position initialPos = s.getPosition();
-		int newX = initialPos.getX(), newY = initialPos.getY() + 1;
-		if(initialPos.getX() <= initialPosition.getX()) {
-			newX +=X_DEVIATION;
+		int newX = 0;
+		if(goRight) {
+			if(initialPos.getX() <= initialPosition.getX() + X_DEVIATION) {
+				newX = 1;
+			} 
+			else {
+				goRight = !goRight;
+			}
 		}
 		else {
-			newX = initialPosition.getX();
+			if(initialPos.getX() >= initialPosition.getX() - X_DEVIATION) {
+				newX = -1;
+			} 
+			else {
+				goRight = !goRight;
+			}
 		}
-		return new Position(newX, newY);
+		return new Position(newX, 1);
 	}
 
 }

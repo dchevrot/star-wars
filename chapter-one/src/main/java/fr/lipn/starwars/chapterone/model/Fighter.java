@@ -1,5 +1,6 @@
 package fr.lipn.starwars.chapterone.model;
 
+import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
 import fr.lipn.starwars.chapterone.model.motion.MotionStrategy;
 
 /**
@@ -7,8 +8,8 @@ import fr.lipn.starwars.chapterone.model.motion.MotionStrategy;
  */
 public class Fighter extends AbstractSpaceShip {
 	
-	Fighter(String name, Faction faction, MotionStrategy motion) {
-		super(name, faction, motion);
+	Fighter(String name, Faction faction, Graphic image, MotionStrategy motion) {
+		super(name, faction, image, motion);
 	}
 	
 	@Override

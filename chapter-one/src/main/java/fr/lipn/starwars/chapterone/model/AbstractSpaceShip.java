@@ -1,5 +1,6 @@
 package fr.lipn.starwars.chapterone.model;
 
+import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
 import fr.lipn.starwars.chapterone.model.motion.MotionStrategy;
 
 /**
@@ -8,11 +9,14 @@ import fr.lipn.starwars.chapterone.model.motion.MotionStrategy;
  */
 public abstract class AbstractSpaceShip implements SpaceShip {
 	
+	
 	/** The name. */
 	private final String name;
 	
 	/** The faction. */
 	private final Faction faction;
+	
+	private final Graphic animation;
 	
 	/** The motion. */
 	private MotionStrategy motion;
@@ -27,15 +31,21 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 	 * @param faction the faction
 	 * @param motion the motion
 	 */
-	AbstractSpaceShip(String name, Faction faction, MotionStrategy motion) {
+	AbstractSpaceShip(String name, Faction faction, Graphic animation, MotionStrategy motion) {
 		this.name = name;
 		this.faction = faction;
+		this.animation = animation;
 		this.motion = motion;
 	}
 	
 	@Override
 	public Faction getFaction() {
 		return faction;
+	}
+	
+	@Override
+	public Graphic getGraphic() {
+		return animation;
 	}
 	
 	/* (non-Javadoc)
@@ -64,8 +74,8 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 	 * @see fr.lipn.starwars.chapterone.model.SpaceShip#move()
 	 */
 	@Override
-	public Position move() {
-		return motion.move(this);
+	public Position move(double animationSpeed) {
+		return motion.move(this, animationSpeed);
 	}
 	
 

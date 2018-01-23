@@ -1,5 +1,7 @@
 package fr.lipn.starwars.chapterone.model;
 
+import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
+
 /**
  * The Interface SpaceShip.
  */
@@ -13,11 +15,20 @@ public interface SpaceShip extends HasFaction {
 	Position getPosition();
 	
 	/**
-	 * Move the spaceship from its initial position to a new one
+	 * Move the spaceship from its initial position to a new one.
 	 *
+	 * @param animationSpeed the animation speed
 	 * @return the new position
 	 */
-	Position move();	
+	Position move(double animationSpeed);	
+	
+	
+	/**
+	 * Gets animation used by {@link StarWarsEngine} to render the spaceship.
+	 *
+	 * @return the graphic animation
+	 */
+	Graphic getGraphic();
 
 	/**
 	 * Allow a pilot to enter the spaceship.

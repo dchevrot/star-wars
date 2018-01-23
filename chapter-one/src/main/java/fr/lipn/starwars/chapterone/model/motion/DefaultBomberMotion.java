@@ -15,8 +15,7 @@ public class DefaultBomberMotion extends AbstractMotion {
 	 */
 	@Override
 	public Position innerMove(SpaceShip s) {
-		Position initialPos = getPosition();
-		return new Position(initialPos.getX(), initialPos.getY() + 1);
+		return new Position(0, 1);
 	}
 
 }

@@ -1,40 +1,54 @@
 package fr.lipn.starwars.chapterone.model;
 
-public class BattleField {
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
-	private static final int GAME_LOOP_CYCLE_MS = 25;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.SlickException;
+
+public class BattleField implements Iterable<SpaceShip> {
+
 	private static final SpaceShipFactory spaceShipFactory = new SpaceShipFactory();
 
-	private final SpaceShip[] spaceShips = createSpaceShips();
-	private final SpaceShip player = spaceShipFactory.createXWing(new Position(0,0));
+	private List<SpaceShip> spaceShips;
+	private SpaceShip player;
 	
-	private static SpaceShip[] createSpaceShips() {
-		return new SpaceShip[] {
-				spaceShipFactory.createYWing(new Position(1,1)),
-				spaceShipFactory.createXWing(new Position(2,2)),
-				spaceShipFactory.createTIEBomber(new Position(3,3)),
-				spaceShipFactory.createBorvo(new Position(4,4))
-		};
+	private static List<SpaceShip> createSpaceShips() {
+		try {
+			return Arrays.asList(
+					spaceShipFactory.createYWing(new Position(1,1)),
+					spaceShipFactory.createXWing(new Position(100,10)),
+					spaceShipFactory.createTIEBomber(new Position(200,20)),
+					spaceShipFactory.createBorvo(new Position(300,20))
+			);
+		} catch (SlickException e) {
+			throw new IllegalStateException("Impossible to create spaceships", e);
+		}
+	}
+	
+	private static SpaceShip createPlayer(GameContainer gameContainer) {
+		try {
+			return spaceShipFactory.createPlayer(gameContainer, new Position(400,400));
+		} catch (SlickException e) {
+			throw new IllegalStateException("Impossible to create the player spaceship", e);
+		}
 	}
 
+	public void init(GameContainer gameContainer) {
+		spaceShips = createSpaceShips();
+		player = createPlayer(gameContainer);
+	}
+
+	@Override
+	public Iterator<SpaceShip> iterator() {
+		return spaceShips.iterator();
+	}
+	
 	public SpaceShip getPlayer() {
 		return player;
 	}
 
-	public void totalWar() {
-		try {
-			while(true) {
-				for(SpaceShip s : spaceShips) {
-					s.move();
-					System.out.println(s);
-				}
-				Thread.sleep(GAME_LOOP_CYCLE_MS);
-			} 
-		}
-		catch (InterruptedException e) {
-			System.out.println("Game interrupted now exit game");
-			System.exit(0);
-		}
-	}
+
 
 }

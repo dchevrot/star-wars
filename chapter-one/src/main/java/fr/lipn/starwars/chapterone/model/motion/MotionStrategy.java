@@ -20,9 +20,11 @@ public interface MotionStrategy {
 	/**
 	 * Compute a new position for the given ship. Create the motion algorithm of your dream here.
 	 * Spaceship is passed if ever you would want to implements spaceship type dependent strategy
+	 *
 	 * @param s the spaceship to move
+	 * @param animationSpeed the animation speed
 	 * @return the new spaceship position
 	 */
-	Position move(SpaceShip s);
+	Position move(SpaceShip s, double animationSpeed);
 
 }
