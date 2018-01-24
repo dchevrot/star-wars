@@ -1,4 +1,4 @@
-package fr.lipn.starwars.chapterone.model;
+package fr.lipn.starwars.chapterone.spaceships;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
+
+import fr.lipn.starwars.chapterone.motion.Position;
 
 public class BattleField implements Iterable<SpaceShip> {
 

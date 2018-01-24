@@ -1,12 +1,13 @@
-package fr.lipn.starwars.chapterone.model;
+package fr.lipn.starwars.chapterone.spaceships;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 
 import fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader;
-import fr.lipn.starwars.chapterone.model.motion.DefaultBomberMotion;
-import fr.lipn.starwars.chapterone.model.motion.DefaultFighterMotion;
-import fr.lipn.starwars.chapterone.model.motion.PlayerMotion;
+import fr.lipn.starwars.chapterone.motion.DefaultBomberMotion;
+import fr.lipn.starwars.chapterone.motion.DefaultFighterMotion;
+import fr.lipn.starwars.chapterone.motion.PlayerMotion;
+import fr.lipn.starwars.chapterone.motion.Position;
 
 public class SpaceShipFactory {
 	

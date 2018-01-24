@@ -1,6 +1,7 @@
-package fr.lipn.starwars.chapterone.model;
+package fr.lipn.starwars.chapterone.spaceships;
 
 import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
+import fr.lipn.starwars.chapterone.motion.Position;
 
 /**
  * The Interface SpaceShip.

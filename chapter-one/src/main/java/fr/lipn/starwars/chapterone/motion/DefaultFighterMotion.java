@@ -1,7 +1,6 @@
-package fr.lipn.starwars.chapterone.model.motion;
+package fr.lipn.starwars.chapterone.motion;
 
-import fr.lipn.starwars.chapterone.model.Position;
-import fr.lipn.starwars.chapterone.model.SpaceShip;
+import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class DefaultFighterMotion extends AbstractMotion {
 

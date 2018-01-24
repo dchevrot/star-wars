@@ -1,4 +1,4 @@
-package fr.lipn.starwars.chapterone.model;
+package fr.lipn.starwars.chapterone.spaceships;
 
 /**
  * The Class Pilot. I am the proud fighter of freedom or not...

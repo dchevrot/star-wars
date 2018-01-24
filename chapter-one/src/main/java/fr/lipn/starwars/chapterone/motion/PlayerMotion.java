@@ -1,11 +1,10 @@
-package fr.lipn.starwars.chapterone.model.motion;
+package fr.lipn.starwars.chapterone.motion;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Input;
 
 import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
-import fr.lipn.starwars.chapterone.model.Position;
-import fr.lipn.starwars.chapterone.model.SpaceShip;
+import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class PlayerMotion extends AbstractMotion {
 

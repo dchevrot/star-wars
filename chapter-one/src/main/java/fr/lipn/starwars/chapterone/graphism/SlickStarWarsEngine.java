@@ -6,9 +6,9 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
-import fr.lipn.starwars.chapterone.model.BattleField;
-import fr.lipn.starwars.chapterone.model.Position;
-import fr.lipn.starwars.chapterone.model.SpaceShip;
+import fr.lipn.starwars.chapterone.motion.Position;
+import fr.lipn.starwars.chapterone.spaceships.BattleField;
+import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class SlickStarWarsEngine extends BasicGame {
 	
@@ -18,8 +18,6 @@ public class SlickStarWarsEngine extends BasicGame {
 	private static final String GAME_TITLE = "Star Wars : the game";
 
 	private final BattleField battleField;
-
-	private int playerX = 400, playerY = 400;
 
 	private Image background;
 

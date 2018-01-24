@@ -1,4 +1,4 @@
-package fr.lipn.starwars.chapterone.model;
+package fr.lipn.starwars.chapterone.spaceships;
 
 public interface HasFaction {
 	

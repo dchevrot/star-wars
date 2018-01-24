@@ -1,7 +1,6 @@
-package fr.lipn.starwars.chapterone.model.motion;
+package fr.lipn.starwars.chapterone.motion;
 
-import fr.lipn.starwars.chapterone.model.Position;
-import fr.lipn.starwars.chapterone.model.SpaceShip;
+import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 /**
  * The Interface MotionStrategy. Implement one of this to make any {@link SpaceShip} moves
