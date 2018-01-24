@@ -61,10 +61,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-		<resources>
-			<resource>
-				<directory>natives</directory>
-			</resource>
-		</resources>
 	</build>
 </project>
