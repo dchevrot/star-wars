@@ -41,14 +41,12 @@ public abstract class AbstractMotion implements MotionStrategy {
 	@Override
 	public Position move(SpaceShip s, double animationSpeed) {
 		Position move = innerMove(s);
-		
-		//deal with animation refresh rate
-		currentPosition = new Position((int) (currentPosition.getX() + move.getX() * animationSpeed),
-				(int) (currentPosition.getY() + move.getY() * animationSpeed));
+		currentPosition = updatePosition(s, move, animationSpeed);
 		return currentPosition;
 	}
 
 	/**
+	 * Compute the move the given spaceship should make
 	 * Classes extending AbstractMotion should implement this method instead of
 	 * method move.
 	 * 
@@ -57,5 +55,19 @@ public abstract class AbstractMotion implements MotionStrategy {
 	 *         new position
 	 */
 	protected abstract Position innerMove(SpaceShip s);
+
+	/**
+	 * Update current position with the given move.
+	 *
+	 * @param s the spaceship
+	 * @param move the move to apply
+	 * @param animationSpeed the animation speed
+	 * @return the new position
+	 */
+	protected Position updatePosition(SpaceShip s, Position move, double animationSpeed) {
+		//deal with animation refresh rate
+		return new Position((int) (currentPosition.getX() + move.getX() * animationSpeed),
+				(int) (currentPosition.getY() + move.getY() * animationSpeed));
+	}
 
 }
