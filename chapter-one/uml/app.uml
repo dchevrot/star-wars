@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="233.0" y="0.0">fr.lipn.starwars.chapterone.model.SpaceShipFactory</node>
+    <node x="93.0" y="402.0">fr.lipn.starwars.chapterone.App</node>
+    <node x="0.0" y="10.5">fr.lipn.starwars.chapterone.model.SpaceShip</node>
+    <node x="19.0" y="189.0">fr.lipn.starwars.chapterone.model.BattleField</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShipFactory">
+      <point x="63.39999999999998" y="-81.5" />
+      <point x="240.89999999999998" y="159.0" />
+      <point x="314.0" y="159.0" />
+      <point x="-81.0" y="69.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.model.BattleField">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShip">
+      <point x="-63.400000000000006" y="-81.5" />
+      <point x="114.1" y="169.0" />
+      <point x="106.5" y="169.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="278.5" y="226.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
