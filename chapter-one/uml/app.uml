@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-4.5" y="14.5">fr.lipn.starwars.chapterone.App</node>
+    <node x="273.0" y="163.5">fr.lipn.starwars.chapterone.model.SpaceShip</node>
+    <node x="244.0" y="-8.0">fr.lipn.starwars.chapterone.model.BattleField</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShip">
+      <point x="0.0" y="48.0" />
+      <point x="0.0" y="-36.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.model.BattleField">
+      <point x="84.5" y="-0.0" />
+      <point x="-116.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="257.5" y="114.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

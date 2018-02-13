@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="691.0" y="523.0">fr.lipn.starwars.chapterone.model.Bomber</node>
+    <node x="-20.0" y="198.5">fr.lipn.starwars.chapterone.model.Pilot</node>
+    <node x="373.5" y="723.0">fr.lipn.starwars.chapterone.model.Fighter</node>
+    <node x="36.5" y="-7.5">fr.lipn.starwars.chapterone.model.HasFaction</node>
+    <node x="393.0" y="3.5">fr.lipn.starwars.chapterone.model.SpaceShip</node>
+    <node x="5.0" y="445.5">fr.lipn.starwars.chapterone.model.Faction</node>
+    <node x="353.5" y="467.0">fr.lipn.starwars.chapterone.model.AbstractSpaceShip</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.lipn.starwars.chapterone.model.Pilot" target="fr.lipn.starwars.chapterone.model.Faction">
+      <point x="0.0" y="81.5" />
+      <point x="0.0" y="-114.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.SpaceShip" target="fr.lipn.starwars.chapterone.model.HasFaction">
+      <point x="-87.0" y="-0.0" />
+      <point x="83.5" y="-0.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Pilot" target="fr.lipn.starwars.chapterone.model.HasFaction">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.Pilot">
+      <point x="-40.0" y="-93.0" />
+      <point x="440.0" y="280.0" />
+      <point x="140.0" y="-0.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.Faction">
+      <point x="-126.5" y="-0.0" />
+      <point x="115.0" y="-0.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Bomber" target="fr.lipn.starwars.chapterone.model.AbstractSpaceShip">
+      <point x="-109.0" y="-0.0" />
+      <point x="126.5" y="-0.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Fighter" target="fr.lipn.starwars.chapterone.model.AbstractSpaceShip">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="93.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.SpaceShip">
+      <point x="0.0" y="-93.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9296969696969697" x="444.5" y="394.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
