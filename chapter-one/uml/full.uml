@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="294.50000000000006" y="772.5">fr.lipn.starwars.chapterone.model.Bomber</node>
+    <node x="414.4284090909091" y="279.0">fr.lipn.starwars.chapterone.model.Pilot</node>
+    <node x="36.5" y="750.0">fr.lipn.starwars.chapterone.model.Fighter</node>
+    <node x="463.5534090909091" y="1142.0">fr.lipn.starwars.chapterone.App</node>
+    <node x="634.1784090909091" y="67.0">fr.lipn.starwars.chapterone.model.HasFaction</node>
+    <node x="714.4284090909091" y="313.0">fr.lipn.starwars.chapterone.model.SpaceShip</node>
+    <node x="322.3034090909091" y="0.0">fr.lipn.starwars.chapterone.model.Faction</node>
+    <node x="335.8034090909091" y="492.0">fr.lipn.starwars.chapterone.model.AbstractSpaceShip</node>
+    <node x="399.5534090909091" y="951.0">fr.lipn.starwars.chapterone.model.BattleField</node>
+    <node x="23.23446969696971" y="301.0">fr.lipn.starwars.chapterone.model.Position</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.lipn.starwars.chapterone.model.Pilot" target="fr.lipn.starwars.chapterone.model.Faction">
+      <point x="-70.0" y="-81.5" />
+      <point x="484.4284090909091" y="254.0" />
+      <point x="494.8034090909091" y="254.0" />
+      <point x="57.5" y="114.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.SpaceShip" target="fr.lipn.starwars.chapterone.model.HasFaction">
+      <point x="0.0" y="-47.5" />
+      <point x="810.9284090909091" y="254.0" />
+      <point x="759.4284090909091" y="254.0" />
+      <point x="41.75" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Pilot" target="fr.lipn.starwars.chapterone.model.HasFaction">
+      <point x="70.0" y="-81.5" />
+      <point x="624.4284090909091" y="254.0" />
+      <point x="675.9284090909091" y="254.0" />
+      <point x="-41.75" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.Fighter">
+      <point x="-74.25" y="-70.5" />
+      <point x="473.8034090909091" y="921.0" />
+      <point x="155.5" y="921.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Bomber" target="fr.lipn.starwars.chapterone.model.Position">
+      <point x="-71.75000000000006" y="-48.0" />
+      <point x="366.25" y="720.0" />
+      <point x="325.3034090909091" y="720.0" />
+      <point x="325.3034090909091" y="472.0" />
+      <point x="175.13446969696975" y="472.0" />
+      <point x="43.400000000000034" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Bomber" target="fr.lipn.starwars.chapterone.model.AbstractSpaceShip">
+      <point x="71.74999999999994" y="-48.0" />
+      <point x="509.75" y="730.0" />
+      <point x="540.5534090909091" y="730.0" />
+      <point x="68.25" y="104.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShip">
+      <point x="74.25" y="-70.5" />
+      <point x="622.3034090909091" y="921.0" />
+      <point x="824.6522727272727" y="921.0" />
+      <point x="824.6522727272727" y="462.0" />
+      <point x="835.0534090909091" y="462.0" />
+      <point x="24.125" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Fighter" target="fr.lipn.starwars.chapterone.model.AbstractSpaceShip">
+      <point x="79.33333333333331" y="-70.5" />
+      <point x="234.83333333333331" y="730.0" />
+      <point x="404.0534090909091" y="730.0" />
+      <point x="-68.25" y="104.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.SpaceShip">
+      <point x="102.375" y="-104.0" />
+      <point x="574.6784090909091" y="472.0" />
+      <point x="738.5534090909091" y="472.0" />
+      <point x="-72.375" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.model.BattleField">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.Bomber">
+      <point x="-24.75" y="-70.5" />
+      <point x="523.3034090909091" y="911.0" />
+      <point x="438.00000000000006" y="911.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.Position">
+      <point x="-102.375" y="-104.0" />
+      <point x="369.9284090909091" y="462.0" />
+      <point x="218.53446969696978" y="462.0" />
+      <point x="86.80000000000004" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.Pilot">
+      <point x="34.125" y="-104.0" />
+      <point x="506.4284090909091" y="472.0" />
+      <point x="554.4284090909091" y="472.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.Position">
+      <point x="-123.75" y="-70.5" />
+      <point x="424.3034090909091" y="931.0" />
+      <point x="26.0" y="931.0" />
+      <point x="26.0" y="472.0" />
+      <point x="44.9344696969697" y="472.0" />
+      <point x="-86.80000000000001" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.model.Faction">
+      <point x="-34.125" y="-104.0" />
+      <point x="438.1784090909091" y="472.0" />
+      <point x="397.0534090909091" y="472.0" />
+      <point x="397.0534090909091" y="254.0" />
+      <point x="379.8034090909091" y="254.0" />
+      <point x="-57.5" y="114.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.model.Fighter" target="fr.lipn.starwars.chapterone.model.Position">
+      <point x="-79.33333333333331" y="-70.5" />
+      <point x="76.16666666666669" y="730.0" />
+      <point x="110.33333333333331" y="730.0" />
+      <point x="110.33333333333331" y="472.0" />
+      <point x="88.33446969696973" y="472.0" />
+      <point x="-43.39999999999998" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6323165704863973" x="454.0" y="596.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
