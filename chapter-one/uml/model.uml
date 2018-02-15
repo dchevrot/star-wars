@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="997.2665229885056" y="323.5">fr.lipn.starwars.chapterone.motion.MotionStrategy</node>
+    <node x="1154.8311781609195" y="579.5">fr.lipn.starwars.chapterone.motion.AbstractMotion</node>
+    <node x="782.6875" y="1273.0">fr.lipn.starwars.chapterone.spaceships.BattleField</node>
+    <node x="0.0" y="290.5">fr.lipn.starwars.chapterone.spaceships.SpaceShip</node>
+    <node x="890.4375" y="1039.0">fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory</node>
+    <node x="547.9375" y="870.5">fr.lipn.starwars.chapterone.spaceships.Bomber</node>
+    <node x="1202.9375" y="826.0">fr.lipn.starwars.chapterone.motion.PlayerMotion</node>
+    <node x="179.9375" y="870.5">fr.lipn.starwars.chapterone.spaceships.Fighter</node>
+    <node x="1323.4331896551723" y="301.0">fr.lipn.starwars.chapterone.motion.Position</node>
+    <node x="920.9375" y="870.5">fr.lipn.starwars.chapterone.motion.DefaultBomberMotion</node>
+    <node x="1559.9375" y="837.0">fr.lipn.starwars.chapterone.motion.DefaultFighterMotion</node>
+    <node x="459.1875" y="0.0">fr.lipn.starwars.chapterone.spaceships.Faction</node>
+    <node x="179.80818965517233" y="67.0">fr.lipn.starwars.chapterone.spaceships.HasFaction</node>
+    <node x="313.2435344827584" y="279.0">fr.lipn.starwars.chapterone.spaceships.Pilot</node>
+    <node x="361.4331896551723" y="502.0">fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.spaceships.Pilot">
+      <point x="-41.625" y="-137.0" />
+      <point x="486.3081896551723" y="482.0" />
+      <point x="453.2435344827584" y="482.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.spaceships.SpaceShip">
+      <point x="-124.875" y="-137.0" />
+      <point x="403.0581896551723" y="482.0" />
+      <point x="225.0" y="482.0" />
+      <point x="90.0" y="70.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
+      <point x="65.5" y="-37.0" />
+      <point x="1117.4375" y="806.0" />
+      <point x="1199.164511494253" y="806.0" />
+      <point x="-88.66666666666674" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.BattleField" target="fr.lipn.starwars.chapterone.spaceships.SpaceShip">
+      <point x="-150.79999999999995" y="-92.5" />
+      <point x="820.3875" y="1253.0" />
+      <point x="89.50215517241395" y="1253.0" />
+      <point x="89.50215517241395" y="482.0" />
+      <point x="45.0" y="482.0" />
+      <point x="-90.0" y="70.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.spaceships.Fighter">
+      <point x="-129.20000000000005" y="-92.0" />
+      <point x="922.7375" y="1019.0" />
+      <point x="353.9375" y="1019.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShip" target="fr.lipn.starwars.chapterone.spaceships.HasFaction">
+      <point x="0.0" y="-70.0" />
+      <point x="135.0" y="254.0" />
+      <point x="221.55818965517233" y="254.0" />
+      <point x="-41.75" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.BattleField" target="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory">
+      <point x="0.0" y="-92.5" />
+      <point x="-80.75" y="92.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.motion.DefaultFighterMotion">
+      <point x="129.20000000000005" y="-92.0" />
+      <point x="1181.1375" y="1019.0" />
+      <point x="1678.9375" y="1019.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.DefaultFighterMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
+      <point x="-79.33333333333326" y="-70.5" />
+      <point x="1599.6041666666667" y="796.0" />
+      <point x="1376.4978448275865" y="796.0" />
+      <point x="88.66666666666674" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.Pilot" target="fr.lipn.starwars.chapterone.spaceships.Faction">
+      <point x="70.0" y="-81.5" />
+      <point x="523.2435344827584" y="254.0" />
+      <point x="516.6875" y="254.0" />
+      <point x="-57.5" y="114.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
+      <point x="-84.25" y="-81.5" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.spaceships.Faction">
+      <point x="41.625" y="-137.0" />
+      <point x="569.5581896551723" y="482.0" />
+      <point x="603.7435344827584" y="482.0" />
+      <point x="603.7435344827584" y="254.0" />
+      <point x="631.6875" y="254.0" />
+      <point x="57.5" y="114.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.Bomber" target="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip">
+      <point x="0.0" y="-37.0" />
+      <point x="724.4375" y="806.0" />
+      <point x="611.1831896551723" y="806.0" />
+      <point x="83.25" y="137.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.AbstractMotion" target="fr.lipn.starwars.chapterone.motion.MotionStrategy">
+      <point x="-88.66666666666674" y="-59.5" />
+      <point x="67.5" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.BattleField" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="150.79999999999995" y="-92.5" />
+      <point x="1121.9875" y="1253.0" />
+      <point x="1808.4375" y="1253.0" />
+      <point x="1808.4375" y="462.0" />
+      <point x="1524.9331896551723" y="462.0" />
+      <point x="93.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip" target="fr.lipn.starwars.chapterone.motion.MotionStrategy">
+      <point x="124.875" y="-137.0" />
+      <point x="652.8081896551723" y="462.0" />
+      <point x="1064.7665229885056" y="462.0" />
+      <point x="-67.5" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.spaceships.Bomber">
+      <point x="-64.60000000000002" y="-92.0" />
+      <point x="987.3375" y="1009.0" />
+      <point x="724.4375" y="1009.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion">
+      <point x="0.0" y="-92.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.motion.PlayerMotion">
+      <point x="64.59999999999991" y="-92.0" />
+      <point x="1116.5375" y="1009.0" />
+      <point x="1371.4375" y="1009.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="-65.5" y="-37.0" />
+      <point x="986.4375" y="806.0" />
+      <point x="1024.5208333333335" y="806.0" />
+      <point x="1024.5208333333335" y="472.0" />
+      <point x="1338.9331896551723" y="472.0" />
+      <point x="-93.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.Fighter" target="fr.lipn.starwars.chapterone.spaceships.AbstractSpaceShip">
+      <point x="0.0" y="-37.0" />
+      <point x="353.9375" y="806.0" />
+      <point x="444.6831896551723" y="806.0" />
+      <point x="-83.25" y="137.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="84.25" y="-81.5" />
+      <point x="1455.6875" y="806.0" />
+      <point x="1443.1875" y="806.0" />
+      <point x="1443.1875" y="482.0" />
+      <point x="1431.9331896551723" y="482.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.DefaultFighterMotion" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="79.33333333333326" y="-70.5" />
+      <point x="1758.2708333333333" y="806.0" />
+      <point x="1743.6875" y="806.0" />
+      <point x="1743.6875" y="472.0" />
+      <point x="1493.9331896551723" y="472.0" />
+      <point x="62.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.Pilot" target="fr.lipn.starwars.chapterone.spaceships.HasFaction">
+      <point x="-70.0" y="-81.5" />
+      <point x="383.2435344827584" y="254.0" />
+      <point x="305.0581896551723" y="254.0" />
+      <point x="41.75" y="47.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.AbstractMotion" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="88.66666666666674" y="-59.5" />
+      <point x="1376.4978448275865" y="482.0" />
+      <point x="1400.9331896551723" y="482.0" />
+      <point x="-31.0" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4918809201623816" x="917.5" y="729.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
