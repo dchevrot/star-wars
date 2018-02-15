@@ -3,56 +3,51 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="17.0" y="256.0">fr.lipn.starwars.chapterone.model.SpaceShipFactory</node>
-    <node x="0.0" y="0.0">fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader</node>
-    <node x="258.875" y="1048.0">fr.lipn.starwars.chapterone.App</node>
-    <node x="360.0" y="278.0">fr.lipn.starwars.chapterone.model.SpaceShip</node>
-    <node x="154.875" y="490.0">fr.lipn.starwars.chapterone.model.BattleField</node>
-    <node x="37.375" y="725.0">fr.lipn.starwars.chapterone.graphism.SlickStarWarsEngine</node>
+    <node x="87.5" y="490.0">fr.lipn.starwars.chapterone.spaceships.BattleField</node>
+    <node x="114.5" y="256.0">fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory</node>
+    <node x="97.5" y="0.0">fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader</node>
+    <node x="191.5" y="1004.0">fr.lipn.starwars.chapterone.App</node>
+    <node x="0.0" y="725.0">fr.lipn.starwars.chapterone.graphism.SlickStarWarsEngine</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShipFactory">
-      <point x="-141.375" y="-92.5" />
-      <point x="202.0" y="465.0" />
-      <point x="97.75" y="465.0" />
-      <point x="-80.75" y="92.0" />
-    </edge>
     <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.graphism.SlickStarWarsEngine">
       <point x="-42.25" y="-25.5" />
-      <point x="301.125" y="1023.0" />
-      <point x="237.875" y="1023.0" />
-      <point x="0.0" y="136.5" />
+      <point x="233.75" y="979.0" />
+      <point x="180.5" y="979.0" />
+      <point x="0.0" y="114.5" />
     </edge>
-    <edge source="fr.lipn.starwars.chapterone.model.BattleField" target="fr.lipn.starwars.chapterone.model.SpaceShip">
-      <point x="141.375" y="-92.5" />
-      <point x="484.75" y="465.0" />
-      <point x="562.5" y="465.0" />
-      <point x="67.5" y="70.0" />
-    </edge>
-    <edge source="fr.lipn.starwars.chapterone.model.SpaceShipFactory" target="fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader">
-      <point x="80.75" y="-92.0" />
-      <point x="259.25" y="231.0" />
-      <point x="267.75" y="231.0" />
-      <point x="89.25" y="103.0" />
-    </edge>
-    <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.model.BattleField">
-      <point x="42.24999999999999" y="-25.5" />
-      <point x="385.625" y="1023.0" />
-      <point x="448.875" y="1023.0" />
-      <point x="448.875" y="700.0" />
-      <point x="437.625" y="700.0" />
-      <point x="94.25" y="92.5" />
-    </edge>
-    <edge source="fr.lipn.starwars.chapterone.graphism.SlickStarWarsEngine" target="fr.lipn.starwars.chapterone.model.BattleField">
-      <point x="0.0" y="-136.5" />
-      <point x="237.875" y="700.0" />
-      <point x="249.125" y="700.0" />
+    <edge source="fr.lipn.starwars.chapterone.graphism.SlickStarWarsEngine" target="fr.lipn.starwars.chapterone.spaceships.BattleField">
+      <point x="0.0" y="-114.5" />
+      <point x="180.5" y="700.0" />
+      <point x="181.75" y="700.0" />
       <point x="-94.25" y="92.5" />
     </edge>
+    <edge source="fr.lipn.starwars.chapterone.App" target="fr.lipn.starwars.chapterone.spaceships.BattleField">
+      <point x="42.25" y="-25.5" />
+      <point x="318.25" y="979.0" />
+      <point x="371.5" y="979.0" />
+      <point x="371.5" y="700.0" />
+      <point x="370.25" y="700.0" />
+      <point x="94.25" y="92.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.BattleField" target="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory">
+      <point x="-94.25" y="-92.5" />
+      <point x="181.75" y="465.0" />
+      <point x="195.25" y="465.0" />
+      <point x="-80.75" y="92.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.spaceships.SpaceShipFactory" target="fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader">
+      <point x="-80.75" y="-92.0" />
+      <point x="195.25" y="231.0" />
+      <point x="186.75" y="231.0" />
+      <point x="-89.25" y="103.0" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.6496872207327972" x="315.0" y="549.5" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.6762790697674419" x="232.5" y="527.5" />
+  <SelectedNodes>
+    <node>fr.lipn.starwars.chapterone.graphism.resources.SpriteLoader</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
