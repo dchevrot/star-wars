@@ -17,7 +17,7 @@ public class BattleField implements Iterable<SpaceShip> {
 	private SpaceShip player;
 	
 	private static List<SpaceShip> createSpaceShips() {
-		try {
+        try {
 			return Arrays.asList(
 					spaceShipFactory.createYWing(new Position(1,1)),
 					spaceShipFactory.createXWing(new Position(100,10)),
@@ -51,6 +51,5 @@ public class BattleField implements Iterable<SpaceShip> {
 		return player;
 	}
 
-
-
 }
+
