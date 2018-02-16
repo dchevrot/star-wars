@@ -1,6 +1,7 @@
 package fr.lipn.starwars.chapterone.spaceships;
 
 import fr.lipn.starwars.chapterone.graphism.resources.Graphic;
+import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 import fr.lipn.starwars.chapterone.motion.Position;
 
 /**
@@ -23,6 +24,13 @@ public interface SpaceShip extends HasFaction {
 	 */
 	Position move(double animationSpeed);	
 	
+	/**
+	 * Test collision with other spaceship
+	 *
+	 * @param s the spaceship to test collision with
+	 * @return true, if spaceships are collide
+	 */
+	boolean collideWith(SpaceShip s);
 	
 	/**
 	 * Gets animation used by {@link StarWarsEngine} to render the spaceship.

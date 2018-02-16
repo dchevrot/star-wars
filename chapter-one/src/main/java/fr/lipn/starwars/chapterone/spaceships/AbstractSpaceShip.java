@@ -79,6 +79,13 @@ public abstract class AbstractSpaceShip implements SpaceShip {
 		return motion.move(this, animationSpeed);
 	}
 	
+	@Override
+	public boolean collideWith(SpaceShip s) {
+		return (getPosition().getX() < s.getPosition().getX() + s.getGraphic().getWidth() &&
+			getPosition().getX() + getGraphic().getWidth() > s.getPosition().getX() &&
+			getPosition().getY() < s.getPosition().getY() + s.getGraphic().getHeight() &&
+			getPosition().getY() + getGraphic().getHeight()  > s.getPosition().getY());
+	}	
 
 	/* (non-Javadoc)
 	 * @see fr.lipn.starwars.chapterone.model.SpaceShip#exit()

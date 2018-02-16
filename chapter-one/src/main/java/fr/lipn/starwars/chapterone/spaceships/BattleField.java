@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.SlickException;
 
+import fr.lipn.starwars.chapterone.graphism.exception.GraphicEngineException;
 import fr.lipn.starwars.chapterone.motion.Position;
 
 public class BattleField implements Iterable<SpaceShip> {
@@ -24,16 +24,16 @@ public class BattleField implements Iterable<SpaceShip> {
 					spaceShipFactory.createTIEBomber(new Position(200,20)),
 					spaceShipFactory.createBorvo(new Position(300,20))
 			);
-		} catch (SlickException e) {
-			throw new IllegalStateException("Impossible to create spaceships", e);
+		} catch (GraphicEngineException e) {
+			throw new AssertionError("Impossible to create spaceships", e);
 		}
 	}
 	
 	private static SpaceShip createPlayer(GameContainer gameContainer) {
 		try {
 			return spaceShipFactory.createPlayer(gameContainer, new Position(400,400));
-		} catch (SlickException e) {
-			throw new IllegalStateException("Impossible to create the player spaceship", e);
+		} catch (GraphicEngineException e) {
+			throw new AssertionError("Impossible to create the player spaceship", e);
 		}
 	}
 

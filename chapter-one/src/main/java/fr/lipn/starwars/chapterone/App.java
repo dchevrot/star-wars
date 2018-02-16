@@ -1,5 +1,7 @@
 package fr.lipn.starwars.chapterone;
 
+import java.net.UnknownHostException;
+
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
 
@@ -12,7 +14,7 @@ import fr.lipn.starwars.chapterone.spaceships.BattleField;
  */
 public class App 
 {
-    public static void main( String[] args ) throws SlickException
+    public static void main( String[] args ) throws SlickException, UnknownHostException
     {
     	AppGameContainer c = new AppGameContainer(new SlickStarWarsEngine(new BattleField()));
     	c.start();
