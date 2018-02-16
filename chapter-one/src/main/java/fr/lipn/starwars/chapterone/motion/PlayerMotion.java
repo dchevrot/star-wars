@@ -23,16 +23,16 @@ public class PlayerMotion extends AbstractMotion {
 		// check the controls, left/right adjust the rotation of the tank, up/down 
 		// move backwards and forwards
 		if (gameContainer.getInput().isKeyDown(Input.KEY_LEFT)) {
-			tryMove(s.getGraphic(), gameContainer, -1, 0);
+			tryMove(s.getGraphic(), gameContainer, -2, 0);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_RIGHT)) {
-			tryMove(s.getGraphic(), gameContainer, 1, 0);
+			tryMove(s.getGraphic(), gameContainer, 2, 0);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_UP)) {
-			tryMove(s.getGraphic(), gameContainer, 0, -1);
+			tryMove(s.getGraphic(), gameContainer, 0, -2);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_DOWN)) {
-			tryMove(s.getGraphic(), gameContainer, 0, 1);
+			tryMove(s.getGraphic(), gameContainer, 0, 2);
 		}
 		return new Position(moveX, moveY);
 	}
@@ -40,16 +40,6 @@ public class PlayerMotion extends AbstractMotion {
 	private void tryMove(Graphic p, GameContainer c, int moveX, int moveY) {
 		this.moveX += moveX;
 		this.moveY += moveY;
-
-//		return new Position(moveX, moveY);
-
-		//		if((newX > 0) && (newX + p.getWidth() < c.getWidth())) {
-		//			playerX = newX;
-		//		}
-		//		if((newY > 0) && (newY + p.getHeight() < c.getHeight())) {
-		//			playerY = newY;
-		//		}
-
 	}
 
 }
