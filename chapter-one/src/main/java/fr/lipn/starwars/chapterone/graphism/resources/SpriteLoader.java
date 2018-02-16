@@ -26,23 +26,23 @@ public class SpriteLoader {
 	}
 	
 	public Graphic loadXWingAnimation() throws SlickException {
-        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f1.png"), 40, 30);
+        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f1.png"), 30, 20);
 	}
 	
 	public Graphic loadYWingAnimation() throws SlickException {
-        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f2.png"), 40, 30);
+        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f2.png"), 30, 20);
 	}
 	
 	public Graphic loadTIEBomberAnimation() throws SlickException {
-        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f3.png"), 40, 30);
+        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f3.png"), 30, 20);
 	}
 	
 	public Graphic loadBorvoAnimation() throws SlickException {
-        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f4.png"), 40, 30);
+        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f4.png"), 30, 20);
 	}
 	
 	public Graphic loadDefaultAnimation() throws SlickException {
-        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f5.png"), 40, 30);
+        return new Graphic(new Image(SPRITES_BASE_PATH + "enemy/Example/e_f5.png"), 30, 20);
 	}
 
 }

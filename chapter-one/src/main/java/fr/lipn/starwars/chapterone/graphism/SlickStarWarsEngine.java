@@ -62,6 +62,11 @@ public class SlickStarWarsEngine extends BasicGame {
 			s.move(animationSpeed);
 		}
         battleField.getPlayer().move(animationSpeed);
+        for(SpaceShip s: battleField) {
+            if (battleField.getPlayer().collideWith(s)) {
+                throw new AssertionError();
+            }
+        }
 	}
 
 }
