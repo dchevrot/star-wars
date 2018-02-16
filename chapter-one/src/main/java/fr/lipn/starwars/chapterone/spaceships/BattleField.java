@@ -17,16 +17,16 @@ public class BattleField implements Iterable<SpaceShip> {
 	private SpaceShip player;
 	
 	private static List<SpaceShip> createSpaceShips() {
-		try {
+        try {
 			return Arrays.asList(
-					spaceShipFactory.createYWing(new Position(1,1)),
-					spaceShipFactory.createXWing(new Position(100,10)),
-					spaceShipFactory.createTIEBomber(new Position(200,20)),
-					spaceShipFactory.createBorvo(new Position(300,20))
+                    spaceShipFactory.createYWing(new Position(1, 1)),
+                    spaceShipFactory.createXWing(new Position(100, 10)),
+                    spaceShipFactory.createTIEBomber(new Position(200, 20)),
+                    spaceShipFactory.createBorvo(new Position(300, 20))
 			);
-		} catch (SlickException e) {
-			throw new IllegalStateException("Impossible to create spaceships", e);
-		}
+        } catch (SlickException e) {
+            throw new IllegalStateException("Impossible to create spaceships", e);
+        }
 	}
 	
 	private static SpaceShip createPlayer(GameContainer gameContainer) {
