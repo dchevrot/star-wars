@@ -12,7 +12,8 @@ import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class SlickStarWarsEngine extends BasicGame {
 	
-	private static final float ANIMATION_SPEED = 7f;
+    private static final float ANIMATION_SPEED = 5f;
+    private static final int MIN_REFRESH_RATE = 30;
 	
 	private static final String BACKGROUND_PATH = "assets/background/space.png";
 	private static final String GAME_TITLE = "Star Wars : the game";
@@ -20,6 +21,8 @@ public class SlickStarWarsEngine extends BasicGame {
 	private final BattleField battleField;
 
 	private Image background;
+
+    private int deltaCount;
 
 	public SlickStarWarsEngine(BattleField battleField) {
 		super(GAME_TITLE);
@@ -34,6 +37,9 @@ public class SlickStarWarsEngine extends BasicGame {
 
 	@Override
 	public void render(GameContainer container, Graphics g) throws SlickException {
+		if(deltaCount != 0) {
+			return;
+		}
 		g.drawImage(background, 0, 0);
 		for(SpaceShip s: battleField) {
 			s.getGraphic().getImage().draw(s.getPosition().getX(), s.getPosition().getY());
@@ -46,15 +52,19 @@ public class SlickStarWarsEngine extends BasicGame {
 
 	@Override
 	public void update(GameContainer container, int delta) throws SlickException {
-		
+		deltaCount += delta;
+        if (deltaCount < MIN_REFRESH_RATE) {
+            // do the job later
+            return;
+        }
+        delta = deltaCount;
+        deltaCount = 0;
+
 		double animationSpeed = delta / ANIMATION_SPEED;
 		for(SpaceShip s: battleField) {
 			s.move(animationSpeed);
 		}
-		battleField.getPlayer().move(animationSpeed);
-		
+        battleField.getPlayer().move(animationSpeed);
 	}
-	
-	
 
 }

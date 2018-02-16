@@ -26,16 +26,16 @@ public class PlayerMotion extends ConditionalMotion {
 		// check the controls, left/right adjust the rotation of the tank, up/down 
 		// move backwards and forwards
 		if (gameContainer.getInput().isKeyDown(Input.KEY_LEFT)) {
-			move(-1, 0);
+			move(-2, 0);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_RIGHT)) {
-			move(1, 0);
+			move(2, 0);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_UP)) {
-			move(0, -1);
+			move(0, -2);
 		}
 		if (gameContainer.getInput().isKeyDown(Input.KEY_DOWN)) {
-			move(0, 1);
+			move(0, 2);
 		}
 		return new Position(moveX, moveY);
 	}
