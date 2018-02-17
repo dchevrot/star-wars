@@ -6,8 +6,9 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
+import fr.lipn.starwars.chapterone.game.GameLogic;
+import fr.lipn.starwars.chapterone.graphism.exception.GraphicEngineException;
 import fr.lipn.starwars.chapterone.motion.Position;
-import fr.lipn.starwars.chapterone.spaceships.BattleField;
 import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class SlickStarWarsEngine extends BasicGame {
@@ -18,40 +19,48 @@ public class SlickStarWarsEngine extends BasicGame {
 	private static final String BACKGROUND_PATH = "assets/background/space.png";
 	private static final String GAME_TITLE = "Star Wars : the game";
 
-	private final BattleField battleField;
+	private final GameLogic gameLogic;
 
 	private Image background;
 
     private int deltaCount;
 
-	public SlickStarWarsEngine(BattleField battleField) {
+	public SlickStarWarsEngine(GameLogic gameLogic) {
 		super(GAME_TITLE);
-		this.battleField = battleField;
+		this.gameLogic = gameLogic;
+	}
+
+	/* (non-Javadoc)
+	 * @see org.newdawn.slick.BasicGame#init(org.newdawn.slick.GameContainer)
+	 */
+	@Override
+	public void init(GameContainer container) {
+		try {
+			background = new Image(BACKGROUND_PATH);
+		}
+		catch(SlickException e) {
+			throw new GraphicEngineException("Background creation error", e);
+		}
+		gameLogic.getBattleField().init();
 	}
 
 	@Override
-	public void init(GameContainer container) throws SlickException {
-		background = new Image(BACKGROUND_PATH);
-		battleField.init(container);
-	}
-
-	@Override
-	public void render(GameContainer container, Graphics g) throws SlickException {
+	public void render(GameContainer container, Graphics g) {
 		if(deltaCount != 0) {
 			return;
 		}
 		g.drawImage(background, 0, 0);
-		for(SpaceShip s: battleField) {
+		for(SpaceShip s: gameLogic.getBattleField()) {
 			s.getGraphic().getImage().draw(s.getPosition().getX(), s.getPosition().getY());
 		}
 		
-		SpaceShip player = battleField.getPlayer();
+		SpaceShip player = gameLogic.getBattleField().getPlayer();
 		Position playerPosition = player.getPosition();
 		player.getGraphic().getImage().draw(playerPosition.getX(), playerPosition.getY());;
 	}
 
 	@Override
-	public void update(GameContainer container, int delta) throws SlickException {
+	public void update(GameContainer container, int delta) {
 		deltaCount += delta;
         if (deltaCount < MIN_REFRESH_RATE) {
             // do the job later
@@ -59,17 +68,9 @@ public class SlickStarWarsEngine extends BasicGame {
         }
         delta = deltaCount;
         deltaCount = 0;
-
-		double animationSpeed = delta / ANIMATION_SPEED;
-		for(SpaceShip s: battleField) {
-			s.move(animationSpeed);
-		}
-        battleField.getPlayer().move(animationSpeed);
-        for(SpaceShip s: battleField) {
-            if (battleField.getPlayer().collideWith(s)) {
-                throw new AssertionError();
-            }
-        }
+        
+        double animationSpeed = delta / ANIMATION_SPEED;
+        gameLogic.gameLoop(animationSpeed);
 	}
 
 }

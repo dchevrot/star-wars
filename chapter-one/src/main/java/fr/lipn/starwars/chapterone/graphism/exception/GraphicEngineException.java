@@ -1,8 +1,8 @@
 package fr.lipn.starwars.chapterone.graphism.exception;
 
-import org.newdawn.slick.SlickException;
+import fr.lipn.starwars.chapterone.exception.StarWarsException;
 
-public class GraphicEngineException extends SlickException {
+public class GraphicEngineException extends StarWarsException {
 
 	private static final long serialVersionUID = 7546242727846033639L;
 

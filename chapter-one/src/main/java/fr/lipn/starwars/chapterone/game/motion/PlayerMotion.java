@@ -1,12 +1,12 @@
-package fr.lipn.starwars.chapterone.motion;
+package fr.lipn.starwars.chapterone.game.motion;
 
 import java.util.Collections;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Input;
 
+import fr.lipn.starwars.chapterone.motion.Position;
 import fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion;
-import fr.lipn.starwars.chapterone.motion.conditions.OutOfBattleField;
 import fr.lipn.starwars.chapterone.spaceships.SpaceShip;
 
 public class PlayerMotion extends ConditionalMotion {
@@ -15,7 +15,7 @@ public class PlayerMotion extends ConditionalMotion {
 	private int moveX, moveY;
 
 	public PlayerMotion(GameContainer container, Position currentPosition) {
-		super(currentPosition, Collections.singletonList(new OutOfBattleField(container)));
+		super(currentPosition, Collections.singletonList(new OutOfBattleFieldCondition(container)));
 		this.gameContainer = container;
 	}
 
