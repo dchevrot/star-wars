@@ -37,9 +37,6 @@ public class SlickStarWarsEngine extends BasicGame {
 
 	@Override
 	public void render(GameContainer container, Graphics g) throws SlickException {
-		if(deltaCount != 0) {
-			return;
-		}
 		g.drawImage(background, 0, 0);
 		for(SpaceShip s: battleField) {
 			s.getGraphic().getImage().draw(s.getPosition().getX(), s.getPosition().getY());
