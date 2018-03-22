@@ -3,68 +3,105 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="476.625" y="22.5">fr.lipn.starwars.chapterone.motion.MotionStrategy</node>
-    <node x="389.95833333333337" y="179.0">fr.lipn.starwars.chapterone.motion.AbstractMotion</node>
-    <node x="258.0" y="348.0">fr.lipn.starwars.chapterone.motion.PlayerMotion</node>
-    <node x="239.62499999999997" y="0.0">fr.lipn.starwars.chapterone.motion.Position</node>
-    <node x="615.0" y="392.5">fr.lipn.starwars.chapterone.motion.DefaultBomberMotion</node>
-    <node x="0.0" y="359.0">fr.lipn.starwars.chapterone.motion.DefaultFighterMotion</node>
+    <node x="333.25" y="179.0">fr.lipn.starwars.chapterone.motion.AbstractMotion</node>
+    <node x="447.7888888888889" y="22.5">fr.lipn.starwars.chapterone.motion.MotionStrategy</node>
+    <node x="885.3472222222222" y="381.0">fr.lipn.starwars.chapterone.motion.conditions.OutOfBattleField</node>
+    <node x="770.5972222222222" y="213.0">fr.lipn.starwars.chapterone.motion.conditions.Condition</node>
+    <node x="507.4722222222222" y="561.0">fr.lipn.starwars.chapterone.motion.PlayerMotion</node>
+    <node x="210.7888888888889" y="0.0">fr.lipn.starwars.chapterone.motion.Position</node>
+    <node x="268.5" y="403.5">fr.lipn.starwars.chapterone.motion.DefaultBomberMotion</node>
+    <node x="10.5" y="370.0">fr.lipn.starwars.chapterone.motion.DefaultFighterMotion</node>
+    <node x="550.5" y="392.0">fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
-      <point x="84.25" y="-81.5" />
-      <point x="510.75" y="328.0" />
-      <point x="522.9583333333334" y="328.0" />
+    <edge source="fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
+      <point x="-97.0" y="-48.5" />
+      <point x="599.0" y="350.0" />
+      <point x="571.5833333333333" y="350.0" />
+      <point x="95.33333333333326" y="70.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion" target="fr.lipn.starwars.chapterone.motion.conditions.Condition">
+      <point x="97.0" y="-48.5" />
+      <point x="793.0" y="350.0" />
+      <point x="858.3472222222222" y="350.0" />
+      <point x="-87.75" y="36.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.AbstractMotion" target="fr.lipn.starwars.chapterone.motion.MotionStrategy">
+      <point x="95.33333333333337" y="-70.5" />
+      <point x="571.5833333333334" y="159.0" />
+      <point x="582.7888888888889" y="159.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
+      <point x="65.5" y="-37.0" />
+      <point x="465.0" y="350.0" />
+      <point x="476.25" y="350.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.conditions.OutOfBattleField">
+      <point x="112.33333333333337" y="-81.5" />
+      <point x="788.3055555555555" y="536.0" />
+      <point x="1033.8472222222222" y="536.0" />
       <point x="0.0" y="59.5" />
     </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion">
+      <point x="0.0" y="-81.5" />
+      <point x="675.9722222222222" y="536.0" />
+      <point x="696.0" y="536.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
     <edge source="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion" target="fr.lipn.starwars.chapterone.motion.Position">
-      <point x="65.5" y="-37.0" />
-      <point x="811.5" y="328.0" />
-      <point x="783.75" y="328.0" />
-      <point x="783.75" y="139.0" />
-      <point x="438.54166666666663" y="139.0" />
-      <point x="90.41666666666663" y="59.5" />
+      <point x="-65.5" y="-37.0" />
+      <point x="334.0" y="340.0" />
+      <point x="315.4166666666667" y="340.0" />
+      <point x="315.4166666666667" y="159.0" />
+      <point x="319.2888888888889" y="159.0" />
+      <point x="0.0" y="59.5" />
     </edge>
     <edge source="fr.lipn.starwars.chapterone.motion.PlayerMotion" target="fr.lipn.starwars.chapterone.motion.Position">
-      <point x="-84.25" y="-81.5" />
-      <point x="342.25" y="318.0" />
-      <point x="330.04166666666663" y="318.0" />
-      <point x="-18.083333333333314" y="59.5" />
+      <point x="-112.33333333333326" y="-81.5" />
+      <point x="563.6388888888889" y="536.0" />
+      <point x="0.0" y="536.0" />
+      <point x="0.0" y="139.0" />
+      <point x="226.2888888888889" y="139.0" />
+      <point x="-93.0" y="59.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.conditions.OutOfBattleField" target="fr.lipn.starwars.chapterone.motion.conditions.Condition">
+      <point x="0.0" y="-59.5" />
+      <point x="87.74999999999989" y="36.5" />
+    </edge>
+    <edge source="fr.lipn.starwars.chapterone.motion.conditions.ConditionalMotion" target="fr.lipn.starwars.chapterone.motion.Position">
+      <point x="0.0" y="-48.5" />
+      <point x="696.0" y="139.0" />
+      <point x="412.2888888888889" y="139.0" />
+      <point x="93.0" y="59.5" />
     </edge>
     <edge source="fr.lipn.starwars.chapterone.motion.DefaultFighterMotion" target="fr.lipn.starwars.chapterone.motion.Position">
       <point x="0.0" y="-70.5" />
-      <point x="119.0" y="328.0" />
-      <point x="84.83333333333331" y="328.0" />
-      <point x="84.83333333333331" y="159.0" />
-      <point x="293.875" y="159.0" />
-      <point x="-54.25" y="59.5" />
-    </edge>
-    <edge source="fr.lipn.starwars.chapterone.motion.AbstractMotion" target="fr.lipn.starwars.chapterone.motion.MotionStrategy">
-      <point x="88.66666666666663" y="-59.5" />
-      <point x="0.0" y="37.0" />
+      <point x="129.5" y="350.0" />
+      <point x="99.20555555555558" y="350.0" />
+      <point x="99.20555555555558" y="159.0" />
+      <point x="288.2888888888889" y="159.0" />
+      <point x="-31.0" y="59.5" />
     </edge>
     <edge source="fr.lipn.starwars.chapterone.motion.AbstractMotion" target="fr.lipn.starwars.chapterone.motion.Position">
-      <point x="0.0" y="-59.5" />
-      <point x="522.9583333333334" y="149.0" />
-      <point x="402.375" y="149.0" />
-      <point x="54.25" y="59.5" />
+      <point x="0.0" y="-70.5" />
+      <point x="476.25" y="149.0" />
+      <point x="381.2888888888889" y="149.0" />
+      <point x="62.0" y="59.5" />
     </edge>
     <edge source="fr.lipn.starwars.chapterone.motion.DefaultFighterMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
       <point x="79.33333333333331" y="-70.5" />
-      <point x="198.33333333333331" y="328.0" />
-      <point x="434.29166666666663" y="328.0" />
-      <point x="-88.66666666666669" y="59.5" />
-    </edge>
-    <edge source="fr.lipn.starwars.chapterone.motion.DefaultBomberMotion" target="fr.lipn.starwars.chapterone.motion.AbstractMotion">
-      <point x="-65.5" y="-37.0" />
-      <point x="680.5" y="328.0" />
-      <point x="611.625" y="328.0" />
-      <point x="88.66666666666663" y="59.5" />
+      <point x="208.83333333333331" y="350.0" />
+      <point x="380.9166666666667" y="350.0" />
+      <point x="-95.33333333333331" y="70.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="438.5" y="255.5" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="439.5" y="396.0" />
+  <SelectedNodes>
+    <node>fr.lipn.starwars.chapterone.motion.PlayerMotion</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
